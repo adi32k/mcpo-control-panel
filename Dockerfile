@@ -37,4 +37,5 @@ RUN mkdir -p /data
 
 # Command to run the application
 # The application will use the environment variables for host, port, and config directory
-CMD ["uv", "run", "python", "-m", "mcpo_control_panel", "--host", "${MCPO_MANAGER_HOST}", "--port", "${MCPO_MANAGER_PORT}", "--config-dir", "${MCPO_MANAGER_DATA_DIR}"]
+#CMD ["uv", "run", "python", "-m", "mcpo_control_panel", "--host", "${MCPO_MANAGER_HOST}", "--port", "${MCPO_MANAGER_PORT}", "--config-dir", "${MCPO_MANAGER_DATA_DIR}"]
+CMD uv run python -m mcpo_control_panel --host ${MCPO_MANAGER_HOST} --port ${MCPO_MANAGER_PORT} --config-dir ${MCPO_MANAGER_DATA_DIR}

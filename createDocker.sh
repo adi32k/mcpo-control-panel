@@ -1,0 +1,1 @@
+docker run -d --name mcpo-control-panel-adi --restart unless-stopped   --add-host=host.docker.internal:host-gateway   -p 8083:8083 -p 9501:9501   -v "$(pwd)/docker/data":/data   adi32k/mcpo-control-panel:latest:
